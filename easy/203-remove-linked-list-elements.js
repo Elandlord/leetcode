@@ -23,3 +23,32 @@ var removeElements = function(head, val) {
         return acc == null ? new ListNode(curr) : new ListNode(curr, acc);
     }, null);
 };
+
+/**
+ * Solution 2
+ */
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+var reverseList = function(head) {
+    let nodes = [];
+
+    while(head) {
+        nodes.push(head.val);
+        head = head.next;
+    }
+
+    return nodes.reduce((acc, curr) => {
+        return acc == null ?
+            new ListNode(curr) :
+            new ListNode(curr, acc)
+    }, null);
+};
