@@ -5,14 +5,14 @@
 var maxSubArray = function(nums) {
     let maxSum = Math.max(...nums);
     let currentSum = 0;
-    
-    for(let i = 0; i < nums.length; i++){ 
-        currentSum = Math.max(nums[i], currentSum + nums[i])
-        
-        maxSum = Math.max(currentSum, maxSum)
-        console.log(maxSum)
-    }
-    return maxSum
+
+    nums.forEach((num, i) => {
+        currentSum = Math.max(num, currentSum + num);
+        maxSum = Math.max(currentSum, maxSum);
+    });
+
+    return maxSum;
 };
 
+console.log(maxSubArray([-2,1,-3,4,-1,2,1,-5,4])); // 6
 // Use Kandane's algorithm to find the maximum sum of a contiguous subarray in an array with a runtime of O(n).
