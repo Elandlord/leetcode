@@ -17,6 +17,8 @@ var removeDuplicates = function(nums) {
     return result;
 };
 
+console.log(removeDuplicates([1,1,1,1,1,1,1,1,2]));
+
 // Example
 // result = 1;
 // 1,1,2
