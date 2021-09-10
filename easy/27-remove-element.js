@@ -11,7 +11,7 @@ var removeElement = function(nums, val) {
     for(let i = 0; i < nums.length; i++) {
         if(nums[i] !== val) {
             nums[count] = nums[i]; // if the nums does not equal the value, this must mean the number should be inserted at the index of count in the array.
-            count++; // increment count, so the array is prepared for the next iteration (to insert a number that is not value)
+            count++; // increment count, so the array  is prepared for the next iteration (to insert a number that is not value)
         }
     }
 
